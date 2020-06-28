@@ -29,19 +29,19 @@ body{
 	background-attachment: fixed;
 }
 .header1{
-	background: url(./img/header.jpg) center / cover;
+	background: url(./../img/header.jpg) center / cover;
 	background-attachment: fixed;
 
 	/* display: none; */
 }
 .header2 {
-	background: url(./img/header2.jpg) center / cover;
+	background: url(./../img/header2.jpg) center / cover;
 	background-attachment: fixed;
 
 	/* display: none; */
 }
 .header3 {
-	background: url(./img/header3.jpg) center / cover;
+	background: url(./../img/header3.jpg) center / cover;
 	background-attachment: fixed;
 	/* background-position-y: -300px; */
 }
