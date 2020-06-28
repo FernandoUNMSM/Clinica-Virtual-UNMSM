@@ -1,0 +1,352 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+::selection {
+	background-color: rgb(31, 248, 230);
+}
+body{
+  width: 100%;
+  height: 100vh;
+}
+
+/*---------------------*/
+/* INICIO HEADER */
+/*---------------------*/
+
+.header{
+  height: 600px;
+  /* background: url(./img/header.jpg) center / cover; */
+	position: relative;
+}
+.headers {
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+	position: absolute;
+	background-attachment: fixed;
+}
+.header1{
+	background: url(./img/header.jpg) center / cover;
+	background-attachment: fixed;
+
+	/* display: none; */
+}
+.header2 {
+	background: url(./img/header2.jpg) center / cover;
+	background-attachment: fixed;
+
+	/* display: none; */
+}
+.header3 {
+	background: url(./img/header3.jpg) center / cover;
+	background-attachment: fixed;
+	/* background-position-y: -300px; */
+}
+/*---------------------*/
+/* FIN HEADER */
+/*---------------------*/
+/*---------------------*/
+/* INICIO MENU */
+/*---------------------*/
+.menu-container {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+	transition: .4s;
+	z-index: 1;
+	/* overflow: hidden; */
+}
+ .menu-container .menuExtra{
+	/* background-color: #fff; */
+	width: max-content;
+}
+ .menu-container .menuExtra .menu{
+	padding-top: 80px;
+	padding-bottom: 20px;
+	/* width: 100%; */
+	margin-right: 30px;
+	text-align: right;
+	/* margin: 10px 100px 0 0; */
+	transition: .4s;
+}
+ .menu-container .menuExtra .menu ul {
+	list-style: none;
+}
+ .menu-container .menuExtra .menu ul li {
+	display: inline;
+	vertical-align: middle;
+}
+ .menu-container .menuExtra .menu ul li i{
+	font-size: 2em;
+}
+ .menu-container .menuExtra .menu ul li .cita{
+	/* background-color: rgb(49, 206, 245); */
+	background: linear-gradient(to right, #61d5ff 0%, #00d9e2 40%, #00ecd8 100%);
+	background-size: 200%;
+	border-radius: 100px;
+	color: white;
+	font-size: 1em;
+	margin: 0 10px 0 20px;
+	padding: 14px 25px;
+	transition: .5s;
+}
+ .menu-container .menuExtra .menu ul li .cita:hover{
+	background-position: right;
+}
+ .menu-container .menuExtra .menu ul li a{
+	/* color: rgb(116, 108, 108); */
+	color: rgb(65, 69, 73);
+	font-size: 1em;
+	font-weight: bold;
+	padding: 17px 25px;
+	text-decoration: none;
+	transition: .3s;
+}
+.menu-container .menuExtra .menu ul li a:hover{
+	color: rgb(125, 126, 128);
+}
+.extra {
+	position: absolute;
+	right: 0;
+	width: 50%;
+	display: flex;
+	justify-content: right;
+	transition: .4s;
+}
+ .extra .covid {
+	display: inline;
+	width: 20%;
+	background-color: #0032a0;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0 10px;
+	color: #FFF;
+	cursor: pointer;
+}
+ .extra .covid i {
+	font-size: 30px;
+}
+ .extra .covid h1{
+	font-size: 15px;
+	font-weight: 500;
+	/* margin-left: 5px; */
+}
+ .contacto-header{
+	/* font-weight: lighter; */
+	display: flex;
+	background: linear-gradient(to right, #00b4f6 0%, #00d9e2 66%, #00ecd8 100%);
+	height: 50px;
+	align-items: center;
+	padding: 0 30px;
+	width: 85%;
+}
+
+ .contacto-header h1,  .contacto-header a{
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	transition: .4s;
+}
+ .contacto-header h1{
+	width: 50%;
+	font-weight: 500;
+	white-space: pre-wrap;
+}
+ .contacto-header a:hover {
+	color: rgb(143, 121, 121);
+}
+ .logo-container {
+	padding-top: 30px;
+	margin-left: 150px;
+	position: absolute;
+	left: 0;
+	transition: .4s;
+}
+ .logo-container .logo img{
+	width: 300px;
+	transition: .6s;
+}
+.on {
+	background-color: #fff;
+}
+/*---------------------*/
+/* FIN MENU */
+/*---------------------*/
+
+/*---------------------*/
+/* INICIO ESPECIALIDADES */
+/*---------------------*/
+
+.especialidades-container h1 {
+	text-align: center;
+	font-size: 2em;
+	margin: 40px 0;
+	color: rgb(19, 191, 243);
+}
+.especialidades-container .especialidades {
+	display: flex;
+	border-top: 1px solid #0032a0;
+}
+.especialidades-container .especialidades-card {
+	width: 30%;
+	height: 400px;
+	background-color: #0032a0;
+	border-left: solid white .5px;
+	/* padding: 40px 20px 60px; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: .4s;
+}
+
+.especialidades-container .especialidades-card:first-of-type {
+	border: none;
+}
+.especialidades-container .especialidades-card > a {
+	color: #fff;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding: 40px 20px 60px;
+}
+.especialidades-container .especialidades-card .subtitulo h2 {
+	/* position: relative; */
+	display: flex;
+	/* padding: 0 10px; */
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: .8em;
+	font-family: 'Gotham-Medium',sans-serif;
+	letter-spacing: 3px;
+	transition: .6s;
+	/* vertical-align: middle; */
+}
+.especialidades-container .especialidades-card .subtitulo h2::after{
+	content: '';
+	display: inline-block;
+	/* width: 50%; */
+	flex-grow: 1;
+
+	height: 1px;
+	/* top: 50%;
+	transform: translateY(-50%); */
+	right: 100%;
+	margin-left: 20px;
+	background-color: #fff;
+	transition: .6s;
+	/* position: relative; */
+}
+.especialidades-container .especialidades-card .enlace {
+	width: 100%;
+	text-align: right;
+}
+.especialidades-container .especialidades-card .enlace{
+	/* text-decoration: none; */
+	color: #fff;
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+.especialidades-container .central h1 {
+	color: white;
+	text-align: left;
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	margin-top: 40px;
+	font-size: 1.4em;
+	transition: .6s;
+}
+.especialidades-container figure {
+	height: 100px;
+	display: flex;
+	align-items: flex-end;
+}
+.especialidades-container img {
+	width: 60px;
+}
+.especialidades-container .especialidades-card:hover {
+	background-color: #fff;
+}
+.especialidades-container .especialidades-card:hover h2,
+.especialidades-container .especialidades-card:hover .central h1{
+	color: #0032a0;
+} 
+.especialidades-container .especialidades-card:hover .subtitulo h2::after{
+	background-color: #0032a0;
+}
+.especialidades-container .especialidades-card:hover .enlace {
+	color: #ccc;
+}
+.especialidades-container > a {
+	text-decoration: none;
+}
+.especialidades-container .masEspe {
+	text-align: center;
+	font-size: .7em;
+	background-color: rgb(18, 174, 246);
+	padding: 20px 0;
+	color: white;
+}
+.especialidades-container .masEspe h2{
+	white-space: pre-wrap;
+	transition: .4s;
+}
+.especialidades-container .masEspe:hover h2{
+	color: #ccc;
+}
+
+/*---------------------*/
+/* FIN ESPECIALIDADES */
+/*---------------------*/
+
+.staff-container h1 {
+	text-align: center;
+	font-size: 2em;
+	font-family: 'Poppins', sans-serif;
+	color: rgb(145, 77, 233);
+	margin: 40px 0;
+}
+.staff-container .staff-group {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	/* position: relative; */
+}
+.staff-container .staff-group .staff {
+	position: relative;
+	overflow: hidden;
+}
+.staff-container .staff-group .staff::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	opacity: .4;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, #61d5ff 0%, #00d9e2 40%, #00ecd8 100%);
+	transition: .5s;
+}
+.staff-container .staff-group .staff:hover::after {
+	left: 0;
+}
+
+.staff-container .staff-group .info{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.staff-container .staff-group figure img{
+	width: 100%;
+}
