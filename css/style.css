@@ -7,6 +7,10 @@
 ::selection {
 	background-color: rgb(31, 248, 230);
 }
+:root {
+	--azulOscuro: #0032a0; 
+	--gradientePrincipal: linear-gradient(to right, #61d5ff 0%, #00d9e2 40%, #00ecd8 100%);
+}
 body{
   width: 100%;
   height: 100vh;
@@ -86,7 +90,7 @@ body{
 }
  .menu-container .menuExtra .menu ul li .cita{
 	/* background-color: rgb(49, 206, 245); */
-	background: linear-gradient(to right, #61d5ff 0%, #00d9e2 40%, #00ecd8 100%);
+	background: var(--gradientePrincipal);
 	background-size: 200%;
 	border-radius: 100px;
 	color: white;
@@ -121,7 +125,7 @@ body{
  .extra .covid {
 	display: inline;
 	width: 20%;
-	background-color: #0032a0;
+	background-color: var(--azulOscuro);
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -193,12 +197,12 @@ body{
 }
 .especialidades-container .especialidades {
 	display: flex;
-	border-top: 1px solid #0032a0;
+	border-top: 1px solid var(--azulOscuro);
 }
 .especialidades-container .especialidades-card {
 	width: 30%;
 	height: 400px;
-	background-color: #0032a0;
+	background-color: var(--azulOscuro);
 	border-left: solid white .5px;
 	/* padding: 40px 20px 60px; */
 	display: flex;
@@ -279,10 +283,10 @@ body{
 }
 .especialidades-container .especialidades-card:hover h2,
 .especialidades-container .especialidades-card:hover .central h1{
-	color: #0032a0;
+	color: var(--azulOscuro);
 } 
 .especialidades-container .especialidades-card:hover .subtitulo h2::after{
-	background-color: #0032a0;
+	background-color: var(--azulOscuro);
 }
 .especialidades-container .especialidades-card:hover .enlace {
 	color: #ccc;
@@ -309,7 +313,15 @@ body{
 /* FIN ESPECIALIDADES */
 /*---------------------*/
 
-.staff-container h1 {
+/*---------------------*/
+/* INICIO STAFF */
+/*---------------------*/
+
+.staff-container {
+	line-height: 0;
+}
+
+.staff-container > h1 {
 	text-align: center;
 	font-size: 2em;
 	font-family: 'Poppins', sans-serif;
@@ -335,7 +347,7 @@ body{
 	left: -100%;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(to right, #61d5ff 0%, #00d9e2 40%, #00ecd8 100%);
+	background: var(--gradientePrincipal);
 	transition: .5s;
 }
 .staff-container .staff-group .staff:hover::after {
@@ -344,9 +356,62 @@ body{
 
 .staff-container .staff-group .info{
 	position: absolute;
-	width: 100%;
+	width: 90%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 0;
+	margin: 0 5px;
+	z-index: 100;
+	font-family: 'Gotham-Medium',sans-serif;
+	transition: .3s;
+	opacity: 0;
+	line-height: initial;
 }
 .staff-container .staff-group figure img{
 	width: 100%;
 }
+.staff-container .staff .info .arriba h2{
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: .8em;
+	letter-spacing: 3px;
+	transition: .6s;
+	color: #FFF;
+}
+.staff-container .staff .info .arriba h2::after{
+	content: '';
+	display: inline-block;
+	flex-grow: .1;
+	height: 1px;
+	right: 100%;
+	margin-left: 20px;
+	background-color: #fff;
+	transition: 1s;
+}
+.staff-container .staff .info .medio h1{
+	font-size: 2.2em;
+	color: var(--azulOscuro);
+}
+.staff-container .staff .info .medio p{
+	color: white;
+}
+.staff-container .staff .info .abajo {
+	text-align: right;
+	color: #ccc;
+	font-size: 20px;
+}
+.staff-container .staff-group .staff:hover .info {
+	margin: 0 25px;
+	opacity: 1;
+}
+.staff-container .staff-group .staff:hover .arriba h2::after {
+	flex-grow: .9;
+}
+
+/*---------------------*/
+/* FIN STAFF */
+/*---------------------*/
