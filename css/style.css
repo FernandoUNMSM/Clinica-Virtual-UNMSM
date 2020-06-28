@@ -359,12 +359,15 @@ body{
 
 .footer-container {
 	width: 100%;
-	padding: 20px 15% 10px;
+	min-width: fit-content;
+	padding: 20px 12% 10px;
 	background-color: #00b4f6;
 	display: flex;
 	justify-content: space-between;
 	position: absolute;
 	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .footer-left {
@@ -385,7 +388,7 @@ body{
 }
 
 .footer-info {
-	margin-right: 10px;
+	margin: 0 40px;
 }
 
 .footer-info ul{
