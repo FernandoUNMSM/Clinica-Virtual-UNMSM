@@ -8,8 +8,10 @@
 	background-color: rgb(31, 248, 230);
 }
 body{
+	min-height: 100vh;
   width: 100%;
-  height: 100vh;
+	height: 100%;
+	position: relative;
 }
 
 /*---------------------*/
@@ -349,4 +351,81 @@ body{
 }
 .staff-container .staff-group figure img{
 	width: 100%;
+}
+
+/*---------------------*/
+/* INICIO FOOTER */
+/*---------------------*/
+
+.footer-container {
+	width: 100%;
+	padding: 20px 15% 10px;
+	background-color: #00b4f6;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer-left {
+	align-self: center;
+}
+
+.footer-left img {
+	width: 170px;
+	margin-bottom: 10px;
+	background-color: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.footer-title {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.footer-info {
+	margin-right: 10px;
+}
+
+.footer-info ul{
+	list-style: none;
+}
+
+.footer-info li {
+	margin-bottom: 10px;
+}
+
+.footer-info li a {
+	text-decoration: none;
+	color: rgb(43, 43, 43);
+}
+
+.footer-info li a:hover{
+	color: white;
+}
+
+.footer-contact form {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-contact form input {
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.footer-contact form .input{
+	width: 300px;
+	border: none;
+	border-radius: 5px;
+}
+
+.footer-contact .button {
+	width: 70px;
+	background-color: #0032a0;
+	border: none;
+	border-radius: 100px;
+	color: white;
+	font-weight: 600;
 }
