@@ -4,6 +4,18 @@ const extra = document.querySelector('.extra');
 const menu = document.querySelector('.menu');
 const logo = document.querySelector('.logo-container .logo img');
 const logoContainer = document.querySelector('.logo-container');
+
+const abrirButton = document.querySelector('#abrir');
+const cerrarButton = document.querySelector('#cerrar');
+const menuOffCanvas = document.querySelector('#menu');
+
+abrirButton.addEventListener('click',()=> {
+    menuOffCanvas.classList.toggle('menuNoVisible');
+});
+cerrarButton.addEventListener('click',()=> {
+    menuOffCanvas.classList.toggle('menuNoVisible');
+});
+
 //Fin Menu
 
 //Incio Header
@@ -12,18 +24,18 @@ const headers = document.querySelectorAll('.headers');
 
 window.onscroll = () => {
     if(window.pageYOffset > 0) {
-        menuContainer.style.background = "white";
-        menu.style.paddingTop = "20px";
-        extra.style.top = "-100%";
-        logo.style.width="150px";
-        logoContainer.style.paddingTop = "20px";
+        menuContainer.classList.add('menuContainer-on');
+        menu.classList.add('menu-on');
+        extra.classList.add('extra-on');
+        logo.classList.add('active');
+        logoContainer.classList.add('logo-on');
     }
     else {
-        menuContainer.style.background = "transparent";
-        menu.style.paddingTop = "80px";
-        extra.style.top = "0";
-        logo.style.width="300px";
-        logoContainer.style.paddingTop = "30px";
+        menuContainer.classList.remove('menuContainer-on');
+        menu.classList.remove('menu-on');
+        extra.classList.remove('extra-on');
+        logo.classList.remove('active');
+        logoContainer.classList.remove('logo-on');
     }
 }
 
@@ -38,3 +50,35 @@ setInterval(()=>{
     headers[i].style.visibility = "visible";
     headers[i].style.opacity = "1";
 },4000);
+
+var j=0;
+const footerMain = document.querySelector('.footer-main');
+const footerContact = document.querySelector('.footer-contact');
+const footerInfo = document.querySelector('.footer-info');
+const footerResponsive = document.createElement('div');footerResponsive.classList.add('respoFooter')
+
+
+if(window.innerWidth <= '1000') {
+    footerResponsive.appendChild(footerInfo);
+    footerResponsive.appendChild(footerContact);
+    footerMain.appendChild(footerResponsive);
+}
+
+
+window.onresize = () => {
+    
+    if(window.innerWidth <= '1000'){
+        if(j==0) {
+            footerResponsive.appendChild(footerInfo);
+            footerResponsive.appendChild(footerContact);
+            footerMain.appendChild(footerResponsive);
+            j++;
+        }
+    }else {
+        j=0;
+        footerMain.removeChild(footerResponsive);
+        footerMain.appendChild(footerInfo);
+        footerMain.appendChild(footerContact);
+    }
+}
+
