@@ -171,6 +171,7 @@ body{
  .extra .covid h1{
 	font-size: 15px;
 	font-weight: 500;
+	font-family: 'Bree Serif', serif;
 	/* margin-left: 5px; */
 }
  .contacto-header{
@@ -189,6 +190,7 @@ body{
 	font-size: 15px;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-family: 'Bree Serif', serif;
 	font-weight: 600;
 	transition: .4s;
 }
@@ -387,7 +389,11 @@ body{
 	max-width: 1200px;
 	margin: auto;
 	display: flex;
+	justify-content: center;
 	/* position: relative; */
+}
+.staff-container .staff-group .responStaff {
+	display: flex;
 }
 .staff-container .staff-group .staff {
 	position: relative;
@@ -567,6 +573,7 @@ body{
 	border-radius: 5px;	
 	height: 35px;
 	padding-left: 10px;
+	font-family: 'Bree-serif', serif;
 }
 
 .footer-contact .button {
@@ -792,6 +799,27 @@ body{
 		width: 100%;
 		align-items: center;
 	}
+	.staff-container .staff-group {
+		flex-direction: column;
+		align-items: center;
+	}
+	.staff-container .staff-group a{
+		width: 50%;
+	}
+	.staff-container .staff-group .staff::after{
+		left: 0;
+	}
+	.staff-container .staff-group .info {
+		opacity: 1;
+		margin: 0 25px;
+	}
+
+	.staff-container .staff-group .info {
+		z-index: initial;
+	}
+	.staff-container .staff-group .staff::after{
+		display: none;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -804,13 +832,68 @@ body{
 	}
 	.footer-left img {
 		margin-bottom: 20px;
+	}	
+	.staff-container .staff-group .info {
+		margin: 0 15px;
+	}
+	.staff-container .staff-group .info .arriba h2{
+		font-size: .6em;
+	}
+	.staff-container .staff-group .info .medio h1{
+		font-size: 1.5em;
+	}
+	.staff-container .staff-group .info .medio p{
+		font-size: .9em;
+	}
+	.staff-container .staff-group .info .abajo p{
+		font-size: .8em;
+		margin-right: 10px;
+	}	
+	.staff-container .staff-group .staff:hover .info {
+		margin: 0 15px;
+	}
+	.header {
+		height: 500px;
+	}
+	.footer-info,.footer-contact {
+		text-align: center;
+	}
+	.footer-contact form{
+		/* justify-content: center; */
+		align-items: center;
+	}
+	.footer-left p {
+		font-size: .8em;
 	}
 }
+
 @media screen and (max-width: 400px) {
 	.logo-container {
 		padding-top: 0;
 	}
 	.logo-container .logo img {
 		width: 150px;
+	}
+	.staff-container .staff-group .info {
+		margin: 0 10px;
+	}
+	.staff-container .staff-group .info .arriba h2{
+		font-size: .5em;
+	}
+	.staff-container .staff-group .info .medio h1{
+		font-size: 1.2em;
+	}
+	.staff-container .staff-group .info .medio p{
+		font-size: .7em;
+	}
+	.staff-container .staff-group .info .abajo p{
+		font-size: .6em;
+		margin-right: 10px;
+	}
+	.staff-container .staff-group .staff:hover .info {
+		margin: 0 10px;
+	}
+	.header {
+		height: 400px;
 	}
 }

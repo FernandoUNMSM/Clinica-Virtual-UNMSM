@@ -73,12 +73,17 @@ window.onresize = () => {
             footerResponsive.appendChild(footerContact);
             footerMain.appendChild(footerResponsive);
             j++;
+            footerResponsive.classList.add('nyan');
         }
     }else {
         j=0;
-        footerMain.removeChild(footerResponsive);
-        footerMain.appendChild(footerInfo);
-        footerMain.appendChild(footerContact);
+        if(footerResponsive.classList.contains('nyan')) {
+            footerResponsive.classList.remove('nyan');
+            footerMain.removeChild(footerResponsive);
+            footerMain.appendChild(footerInfo);
+            footerMain.appendChild(footerContact);
+        }
+    
     }
 }
 
